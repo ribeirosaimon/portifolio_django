@@ -1,1 +1,1 @@
-web: gunicorn manage:application --preload -b 0.0.0.0:5000
+ web: gunicorn myproject.wsgi --preload -b 0.0.0.0:5000
