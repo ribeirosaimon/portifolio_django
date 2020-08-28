@@ -63,7 +63,11 @@ TEMPLATES = [
 WSGI_APPLICATION = 'portfolio.wsgi.application'
 
 
-DATABASES = {'default': dj_database_url.config(default='postgres://user:pass@localhost/dbname')}
+DATABASES = {
+    'default':{
+        'ENGINE':'django.db.backends.sqlite3'
+        'NAME':os.path.join(BASE_DIR,'db.sqlite3'),
+    }
 
 
 AUTH_PASSWORD_VALIDATORS = [
